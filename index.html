@@ -1,36 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Hello World</title>
-    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-
-    <!-- Don't use this in production: -->
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script lang="JavaScript" src="./script.js"></script>
+    <title>03 - Newsletter</title>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="text/babel">
-      import "styles.css";
-
-      function MyApp() {
-        return <h1>Hello, world3!</h1>;
-      }
-
-      const container = document.getElementById("root");
-      const root = ReactDOM.createRoot(container);
-      root.render(<MyApp />);
-    </script>
-    <!--
-      Note: this page is a great way to try React but it's not suitable for production.
-      It slowly compiles JSX with Babel in the browser and uses a large development build of React.
-
-      Read this page for starting a new React project with JSX:
-      https://react.dev/learn/start-a-new-react-project
-
-      Read this page for adding React with JSX to an existing project:
-      https://react.dev/learn/add-react-to-an-existing-project
-    -->
+    <main>
+      <div id="container">
+        <div class="left-col">
+          <div>
+            <h1>Stay updated!</h1>
+          </div>
+          <div>
+            <p>Join 60,000+ product managers receiving monthly updates on:</p>
+          </div>
+          <div>
+            <ul>
+              <li>Product discovery and building what matters</li>
+              <li>Measuring to ensure updates are a success</li>
+              <li>And much more!</li>
+            </ul>
+          </div>
+          <div>
+            <from name="signup">
+              <label for="email">Email address</label>
+              <div>
+                <input
+                  name="email"
+                  type="text"
+                  class="input-email"
+                  placeholder="Email address"
+                />
+              </div>
+              <div>
+                <button type="submit" class="submit-btn">
+                  Subscribe to monthly newsletter
+                </button>
+              </div>
+            </from>
+          </div>
+        </div>
+        <div class="right-col">
+          <img
+            src="./assets/images/illustration-sign-up-desktop.svg"
+            alt="picture"
+            class="img"
+          />
+        </div>
+      </div>
+    </main>
   </body>
 </html>
